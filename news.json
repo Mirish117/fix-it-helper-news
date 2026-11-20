@@ -1,0 +1,110 @@
+{
+  "feedName": "Fix-It Helper News",
+  "updated": "2026-11-20",
+  "items": [
+    {
+      "id": "2026-11-kb5132061-install-fails",
+      "date": "2026-11-12",
+      "type": "problem",
+      "title": "November Windows 11 update fails with error 0x800f0993, 0x800f0989 or 0x80070306",
+      "summary": "The November 2026 security update (KB5132061) gets stuck near the end or keeps failing on some PCs. Microsoft says it affects PCs that installed the optional October preview update (KB5127936).",
+      "whatToDo": "Microsoft is repairing affected PCs automatically through Windows Update. Leave the computer on and connected to the internet, then check for updates again. Do not reset or reinstall Windows over this.",
+      "match": { "windows": "11", "versions": ["24H2", "25H2", "26H2"], "missingUpdate": "KB5132061" },
+      "action": "run:winupdate",
+      "actionLabel": "Open Windows Update",
+      "source": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5132061-installation-issues-0x80070306-0x800f0989-0x800f0993-errors/",
+      "sourceName": "BleepingComputer"
+    },
+    {
+      "id": "2026-11-26h2-usb-audio",
+      "date": "2026-11-10",
+      "type": "fixed",
+      "title": "Windows 11 26H2: USB headsets and speakers with no sound",
+      "summary": "After installing Windows 11 version 26H2, some USB audio devices did not start. Device Manager showed Code 10, and there was no sound. Microsoft fixed this in the November 2026 update (KB5132061).",
+      "whatToDo": "Install the latest update from Windows Update, then restart the computer.",
+      "match": { "windows": "11", "versions": ["26H2"], "missingUpdate": "KB5132061" },
+      "action": "run:winupdate",
+      "actionLabel": "Open Windows Update",
+      "source": "https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-26h2",
+      "sourceName": "Microsoft"
+    },
+    {
+      "id": "2026-10-24h2-end-of-updates",
+      "date": "2026-10-13",
+      "type": "problem",
+      "title": "Windows 11 version 24H2 Home and Pro no longer get security updates",
+      "summary": "Support for Windows 11 version 24H2 Home and Pro ended on October 13, 2026. The October 2026 update was the last one for these editions.",
+      "whatToDo": "Update to Windows 11 version 26H2. Open Windows Update, choose Check for updates, then Download and install.",
+      "match": { "windows": "11", "versions": ["24H2"], "editions": "^(Core|Professional)" },
+      "action": "run:winupdate",
+      "actionLabel": "Open Windows Update",
+      "source": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-11-24h2-home-and-pro-reached-end-of-support/amp/",
+      "sourceName": "BleepingComputer"
+    },
+    {
+      "id": "2026-11-26h2-rollout",
+      "date": "2026-11-18",
+      "type": "info",
+      "title": "Windows 11 version 26H2 is now rolling out automatically",
+      "summary": "Windows 11 version 26H2 is available for all eligible PCs. Since November 18, 2026, Microsoft is gradually installing it on home PCs running 24H2 or 25H2. It is a small update that installs quickly.",
+      "whatToDo": "Nothing urgent. To get it now, open Windows Update, choose Check for updates, then Download and install.",
+      "match": { "windows": "11", "versions": ["24H2", "25H2"] },
+      "action": "run:winupdate",
+      "actionLabel": "Open Windows Update",
+      "source": "https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-26h2",
+      "sourceName": "Microsoft"
+    },
+    {
+      "id": "2026-06-win10-esu-2027",
+      "date": "2026-06-25",
+      "type": "info",
+      "title": "Windows 10: free security updates now run until October 12, 2027",
+      "summary": "Windows 10 support ended in October 2025. Microsoft extended its free Extended Security Updates program for home PCs by one more year, to October 12, 2027.",
+      "whatToDo": "Make sure this PC is enrolled. Open Windows Update and look for the Extended Security Updates enrollment message. You may need to sign in with a Microsoft account. Plan a move to Windows 11 before October 2027.",
+      "match": { "windows": "10" },
+      "action": "run:winupdate",
+      "actionLabel": "Open Windows Update",
+      "source": "https://www.helpnetsecurity.com/2026/06/26/microsoft-windows-10-free-security-updates-esu-program/",
+      "sourceName": "Help Net Security"
+    },
+    {
+      "id": "2026-11-amd-ssd-writes",
+      "date": "2026-11-18",
+      "type": "fixed",
+      "title": "AMD Radeon driver bug that kept writing to your drive is fixed",
+      "summary": "AMD Software 26.11.1 (November 12) fixed heavy background writes to the system drive on Radeon RX 7000 and newer, including writes while moving or resizing windows. Version 26.11.2 (November 18) fixed the same problem for RX 5000 and RX 6000 on Windows 10, plus Smart Access Memory turning off after installing on Windows 10.",
+      "whatToDo": "Update AMD Software: Adrenalin Edition to version 26.11.2 or newer.",
+      "match": { "gpu": "AMD|Radeon" },
+      "action": "url:https://www.amd.com/en/support/download/drivers.html",
+      "actionLabel": "Get the AMD driver",
+      "source": "https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-11-2.html",
+      "sourceName": "AMD"
+    },
+    {
+      "id": "2026-11-nvidia-62114-video",
+      "date": "2026-11-04",
+      "type": "problem",
+      "title": "NVIDIA RTX 50 series: video freezes or goes black after driver 621.01",
+      "summary": "NVIDIA driver 621.14 (November 4, 2026) fixes video playback that could freeze or show a black screen on some GeForce RTX 50 series cards after driver 621.01.",
+      "whatToDo": "Update the NVIDIA driver to 621.14 or newer, using the NVIDIA App or the NVIDIA website.",
+      "match": { "gpu": "RTX 50", "nvidiaDriverBelow": "621.14" },
+      "action": "url:https://www.nvidia.com/en-us/drivers/",
+      "actionLabel": "Get the NVIDIA driver",
+      "source": "https://www.techspot.com/drivers/driver/file/information/18444/",
+      "sourceName": "TechSpot"
+    },
+    {
+      "id": "2026-09-nvidia-legacy-security",
+      "date": "2026-09-30",
+      "type": "info",
+      "title": "Older NVIDIA GTX 900 and GTX 10 series cards: install the security driver",
+      "summary": "NVIDIA released security driver 582.78 on September 30, 2026 for older Maxwell, Pascal and Volta cards, which includes the GeForce GTX 900 and GTX 10 series.",
+      "whatToDo": "Install NVIDIA driver 582.78 or newer from the NVIDIA website.",
+      "match": { "gpu": "GTX (9[5-8]0|10[5-8]0)|TITAN (X|Xp|V)", "nvidiaDriverBelow": "582.78" },
+      "action": "url:https://www.nvidia.com/en-us/drivers/",
+      "actionLabel": "Get the NVIDIA driver",
+      "source": "https://www.elevenforum.com/t/latest-nvidia-geforce-graphics-drivers-for-windows-11.632/page-48",
+      "sourceName": "ElevenForum"
+    }
+  ]
+}
