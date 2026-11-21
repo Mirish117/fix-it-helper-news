@@ -1,6 +1,6 @@
 {
   "feedName": "Fix-It Helper News",
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "items": [
     {
       "id": "2026-11-kb5132061-install-fails",
@@ -16,17 +16,60 @@
       "sourceName": "BleepingComputer"
     },
     {
+      "id": "2026-11-print-fails-win11",
+      "date": "2026-11-13",
+      "type": "problem",
+      "title": "November Windows 11 update: some Word documents will not print",
+      "summary": "Microsoft confirmed that the November 2026 Windows updates can stop some documents from printing. It mostly happens with Word documents that contain hidden or zero-size pictures, such as invisible watermarks. Microsoft is working on a fix but has not given a date.",
+      "whatToDo": "Keep your updates installed and check Windows Update again in a few days for the fix. Until then, if a Word document will not print, try saving it as a PDF (File, Save As, PDF) and printing the PDF instead. Other documents should print normally.",
+      "match": { "windows": "11", "hasUpdate": "KB5132061" },
+      "action": "fix:printer",
+      "actionLabel": "Check my printer",
+      "source": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/",
+      "sourceName": "BleepingComputer",
+      "expires": "2027-02-11"
+    },
+    {
+      "id": "2026-11-print-fails-win10",
+      "date": "2026-11-13",
+      "type": "problem",
+      "title": "November Windows 10 update: some Word documents will not print",
+      "summary": "Microsoft confirmed that the November 2026 Windows updates can stop some documents from printing. It mostly happens with Word documents that contain hidden or zero-size pictures, such as invisible watermarks. Microsoft is working on a fix but has not given a date.",
+      "whatToDo": "Keep your updates installed and check Windows Update again in a few days for the fix. Until then, if a Word document will not print, try saving it as a PDF (File, Save As, PDF) and printing the PDF instead. Other documents should print normally.",
+      "match": { "windows": "10", "hasUpdate": "KB5131096" },
+      "action": "fix:printer",
+      "actionLabel": "Check my printer",
+      "source": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/",
+      "sourceName": "BleepingComputer",
+      "expires": "2027-02-11"
+    },
+    {
       "id": "2026-11-26h2-usb-audio",
       "date": "2026-11-10",
       "type": "fixed",
-      "title": "Windows 11 26H2: USB headsets and speakers with no sound",
-      "summary": "After installing Windows 11 version 26H2, some USB audio devices did not start. Device Manager showed Code 10, and there was no sound. Microsoft fixed this in the November 2026 update (KB5132061).",
+      "title": "Windows 11: USB headsets and speakers with no sound",
+      "summary": "Some USB headsets, speakers and sound adapters stopped working on Windows 11, showing Code 10 in Device Manager or giving no sound. Microsoft says this hit PCs on versions 24H2 and 25H2 after the September 2026 update, and PCs that moved to 26H2. The November 2026 update (KB5132061) fixes it.",
       "whatToDo": "Install the latest update from Windows Update, then restart the computer.",
-      "match": { "windows": "11", "versions": ["26H2"], "missingUpdate": "KB5132061" },
+      "match": { "windows": "11", "versions": ["24H2", "25H2", "26H2"], "missingUpdate": "KB5132061" },
       "action": "run:winupdate",
       "actionLabel": "Open Windows Update",
       "source": "https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-26h2",
-      "sourceName": "Microsoft"
+      "sourceName": "Microsoft",
+      "expires": "2027-02-08"
+    },
+    {
+      "id": "2026-11-win10-usb-audio",
+      "date": "2026-11-10",
+      "type": "fixed",
+      "title": "Windows 10: USB headsets and speakers with no sound are fixed",
+      "summary": "After the September 2026 update, some USB headsets, speakers and sound adapters on Windows 10 showed Code 10 in Device Manager or played no sound. Microsoft fixed this in the November 2026 update (KB5131096).",
+      "whatToDo": "Install the latest update from Windows Update, then restart the computer. Your PC needs to be enrolled in Extended Security Updates to get it.",
+      "match": { "windows": "10", "missingUpdate": "KB5131096" },
+      "action": "run:winupdate",
+      "actionLabel": "Open Windows Update",
+      "source": "https://learn.microsoft.com/en-us/windows/release-health/status-windows-10-22h2",
+      "sourceName": "Microsoft",
+      "expires": "2027-02-08"
     },
     {
       "id": "2026-10-24h2-end-of-updates",
