@@ -1,6 +1,6 @@
 {
   "feedName": "Fix-It Helper News",
-  "updated": "2026-11-20",
+  "updated": "2026-11-25",
   "items": [
     {
       "id": "2026-11-kb5132061-install-fails",
@@ -14,6 +14,20 @@
       "actionLabel": "Open Windows Update",
       "source": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5132061-installation-issues-0x80070306-0x800f0989-0x800f0993-errors/",
       "sourceName": "BleepingComputer"
+    },
+    {
+      "id": "2026-11-kb5132057-preview-fails",
+      "date": "2026-11-24",
+      "type": "problem",
+      "title": "Optional Windows 11 preview update KB5132057 fails to install on some PCs",
+      "summary": "The optional November 2026 preview update (KB5132057) for Windows 11 versions 25H2 and 26H2 is failing to install for some people, with errors such as 0x800f0989 or 0x800f0993. Microsoft has not confirmed the problem yet.",
+      "whatToDo": "You do not need this update. It is optional, and its fixes will also come in the regular December security update. If it keeps failing, just leave it and check Windows Update again in December. Do not reset or reinstall Windows over this.",
+      "match": { "windows": "11", "versions": ["25H2", "26H2"], "missingUpdate": "KB5132057" },
+      "action": "run:winupdate",
+      "actionLabel": "Open Windows Update",
+      "source": "https://www.neowin.net/news/final-2026-windows-11-optional-update-kb5132057-fails-to-install/",
+      "sourceName": "Neowin",
+      "expires": "2027-01-31"
     },
     {
       "id": "2026-11-26h2-usb-audio",
@@ -79,6 +93,20 @@
       "actionLabel": "Get the AMD driver",
       "source": "https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-11-2.html",
       "sourceName": "AMD"
+    },
+    {
+      "id": "2026-11-nvidia-62140-drive-writes",
+      "date": "2026-11-24",
+      "type": "fixed",
+      "title": "NVIDIA driver 621.40 stops a bug that kept writing to your drive in the background",
+      "summary": "Recent NVIDIA drivers could keep writing a log file to the main drive over and over in the background, which can add needless wear to SSD drives. An earlier hotfix (621.35) did not fully solve it. NVIDIA says driver 621.40, released November 24, 2026, fixes it.",
+      "whatToDo": "Update the NVIDIA driver to 621.40 or newer, using the NVIDIA App or the NVIDIA website. Restart the computer after it installs.",
+      "match": { "gpu": "NVIDIA|GeForce|RTX", "nvidiaDriverBelow": "621.40" },
+      "action": "url:https://www.nvidia.com/en-us/drivers/",
+      "actionLabel": "Get the NVIDIA driver",
+      "source": "https://www.tweaktown.com/news/114872/nvidias-new-geforce-game-ready-driver-621-40-reportedly-fixes-excessive-ssd-writes/index.html",
+      "sourceName": "TweakTown",
+      "expires": "2027-02-22"
     },
     {
       "id": "2026-11-nvidia-62114-video",
