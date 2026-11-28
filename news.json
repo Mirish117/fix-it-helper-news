@@ -1,19 +1,20 @@
 {
   "feedName": "Fix-It Helper News",
-  "updated": "2026-11-20",
+  "updated": "2026-11-28",
   "items": [
     {
       "id": "2026-11-kb5132061-install-fails",
       "date": "2026-11-12",
-      "type": "problem",
-      "title": "November Windows 11 update fails with error 0x800f0993, 0x800f0989 or 0x80070306",
-      "summary": "The November 2026 security update (KB5132061) gets stuck near the end or keeps failing on some PCs. Microsoft says it affects PCs that installed the optional October preview update (KB5127936).",
-      "whatToDo": "Microsoft is repairing affected PCs automatically through Windows Update. Leave the computer on and connected to the internet, then check for updates again. Do not reset or reinstall Windows over this.",
-      "match": { "windows": "11", "versions": ["24H2", "25H2", "26H2"], "missingUpdate": "KB5132061" },
+      "type": "fixed",
+      "title": "Fixed: November Windows 11 update failing with error 0x800f0993, 0x800f0989 or 0x80070306",
+      "summary": "Some PCs that had the optional October preview update (KB5127936) could not install the November 2026 security update (KB5132061). Microsoft says it has now repaired affected PCs automatically through Windows Update, and the update then installs on its own.",
+      "whatToDo": "Make sure the computer is connected to the internet, then open Windows Update and choose Check for updates. If the update still fails, use the Get Help app in Windows to contact Microsoft Support. Do not reset or reinstall Windows over this.",
+      "match": { "windows": "11", "versions": ["25H2", "26H2"], "missingUpdate": "KB5132061" },
       "action": "run:winupdate",
       "actionLabel": "Open Windows Update",
-      "source": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-kb5132061-installation-issues-0x80070306-0x800f0989-0x800f0993-errors/",
-      "sourceName": "BleepingComputer"
+      "source": "https://support.microsoft.com/en-us/servicing/os/windows-11/2026/11/kb5132061-windows-11-24h2-25h2-26h2-security-update",
+      "sourceName": "Microsoft",
+      "expires": "2027-02-10"
     },
     {
       "id": "2026-11-26h2-usb-audio",
